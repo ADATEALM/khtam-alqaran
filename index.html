@@ -578,7 +578,6 @@ function closeSavePopup() {
 
 
 
-
 function captureScreenshot() {
     let pageNum = document.getElementById("page-number").value;
     if (!pageNum) {
@@ -590,21 +589,39 @@ function captureScreenshot() {
     html2canvas(savePopup).then(canvas => {
         let imgData = canvas.toDataURL("image/png");
 
-        // إنشاء رابط لتحميل الصورة مع اسم الملف المطلوب
+        // عرض رسالة للمستخدم في وسط الشاشة
+        let messageBox = document.createElement("div");
+        messageBox.style.position = "fixed";
+        messageBox.style.top = "50%";
+        messageBox.style.left = "50%";
+        messageBox.style.transform = "translate(-50%, -50%)";
+        messageBox.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+        messageBox.style.color = "white";
+        messageBox.style.padding = "20px";
+        messageBox.style.borderRadius = "10px";
+        messageBox.style.fontSize = "18px";
+        messageBox.style.textAlign = "center";
+        messageBox.style.zIndex = "9999";
+        messageBox.textContent = "⚠️ خذ سكرين شوت لحفظ الصورة في جهازك!";
+
+        document.body.appendChild(messageBox);
+
+        // إزالة الرسالة بعد 5 ثواني
+        setTimeout(() => {
+            messageBox.remove();
+        }, 5000);
+
+        // إنشاء رابط لتحميل الصورة
         let link = document.createElement("a");
         link.href = imgData;
-        link.download = `ختم_القران_صفحة_${pageNum}.png`;  // تغيير اسم الملف ليشمل "ختم القران"
-        
-        // تفعيل التحميل
+        link.download = `ختم_القران_صفحة_${pageNum}.png`;
         link.click();
 
-        // عرض إشعار للمستخدم
+        // إشعار آخر للمستخدم بعد تنزيل الصورة
         alert("📌 تم الحفظ بنجاح! تم تنزيل الصورة في جهازك.");
-
-        // إغلاق النافذة
-        closeSavePopup();
     });
 }
+
 
 
 
