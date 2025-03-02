@@ -354,41 +354,47 @@ const content = {
     1: {
         "الصبح": `
            
+
+
+<style>
+    /* استيراد الخط العربي من Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+    /* تصميم الحاوية */
+    .mohtawa-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: linear-gradient(to right, #FF8C00, #FFD700); /* تدرج لوني جذاب */
+        border-radius: 15px; /* حواف مستديرة */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* تأثير الظل ليكون أكثر بروزًا */
+        direction: rtl; /* لتغيير الاتجاه من اليمين لليسار */
+        overflow: hidden; /* التأكد من أن جميع العناصر داخل الحاوية لا تتجاوز الحدود */
+    }
+
+    /* تصميم النص */
+    .mohtawa .content-text {
+        font-size: 26px; /* تكبير الخط */
+        font-family: 'Amiri', serif; /* الخط العربي الأصيل */
+        line-height: 1.6;
+        text-align: right; /* محاذاة النص لليمين */
+        color: #333;
+        padding: 15px;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.8); /* خلفية بيضاء شفافة للنص */
+        border-radius: 10px; /* حواف مستديرة للنص */
+    }
+</style>
+
+
+
 <div class="mohtawa-container">
     <div class="mohtawa">
         <p class="content-text">📖 محتوى اليوم 1 - رواية ورش - الجزء المعين بعد صلاة الصبح:</p>
     </div>
 </div>
 
-<style>
-    /* استيراد الخط العربي من Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
-
-    .mohtawa-container {
-        width: 100%;
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 15px;
-        background-color: #f4f4f4; /* يمكنك تخصيص اللون */
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        direction: rtl; /* لتغيير الاتجاه من اليمين لليسار */
-    }
-
-    .mohtawa .content-text {
-        font-size: 24px; /* تكبير الخط */
-        font-family: 'Amiri', serif; /* الخط العربي الأصيل */
-        line-height: 1.6;
-        text-align: right; /* محاذاة النص لليمين */
-        color: #333;
-        padding: 10px;
-        margin: 0;
-    }
-</style>
-
-
-
-   
 
 
             <img src="ورش مصحف/ورش1.jpg" alt="صفحة 1">
