@@ -568,6 +568,11 @@ function saveBookmark() {
 function closeSavePopup() {
     document.getElementById("save-popup").style.display = "none";
 }
+
+
+
+
+
 function captureScreenshot() {
     let pageNum = document.getElementById("page-number").value;
     if (!pageNum) {
@@ -579,10 +584,10 @@ function captureScreenshot() {
     html2canvas(savePopup).then(canvas => {
         let imgData = canvas.toDataURL("image/png");
 
-        // إنشاء رابط لتحميل الصورة
+        // إنشاء رابط لتحميل الصورة مع اسم الملف المطلوب
         let link = document.createElement("a");
         link.href = imgData;
-        link.download = `Bookmark_Page_${pageNum}.png`;
+        link.download = `ختم_القران_صفحة_${pageNum}.png`;  // تغيير اسم الملف ليشمل "ختم القران"
         
         // تفعيل التحميل
         link.click();
@@ -594,6 +599,7 @@ function captureScreenshot() {
         closeSavePopup();
     });
 }
+
 
 
     </script>
