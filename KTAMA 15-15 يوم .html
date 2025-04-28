@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختم قرآنك يشفع لك</title>
+    <style>
+        :root {
+            --primary-color: #2a9d8f;
+            --secondary-color: #e9c46a;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --button-gradient-start: #007bff;
+            --button-gradient-end: #0056b3;
+            --hover-gradient-start: #0056b3;
+            --hover-gradient-end: #003580;
+        }
+
+        .dark-mode {
+            --primary-color: #264653;
+            --secondary-color: #2a9d8f;
+            --text-color: #f8f9fa;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --button-gradient-start: #6c757d;
+            --button-gradient-end: #495057;
+            --hover-gradient-start: #495057;
+            --hover-gradient-end: #343a40;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .custom-button {
+            background: linear-gradient(45deg, var(--button-gradient-start), var(--button-gradient-end));
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            flex: 1 1 200px;
+            max-width: 300px;
+        }
+
+        .custom-button:hover {
+            background: linear-gradient(45deg, var(--hover-gradient-start), var(--hover-gradient-end));
+            transform: scale(1.05);
+        }
+
+        .days-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .day-card {
+            display: block;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .day-card:hover {
+            background-color: #f4a261;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 20px;
+                padding: 15px 40px 15px 60px;
+            }
+            
+            .theme-toggle {
+                left: 10px;
+                font-size: 18px;
+            }
+            
+            .custom-button {
+                width: 100%;
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+
+            .days-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .day-card {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .days-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        اختم قرآنك يشفع لك يوم القيامة ويختم أجلك
+        <button class="theme-toggle" id="themeToggle">🌓</button>
+    </header>
+
+    <div class="buttons-container">
+        <button class="custom-button" onclick="navigateToPage('index.html')">ختمة واحدة</button>
+        <button class="custom-button" onclick="navigateToPage('khatma2.html')">ختمتين</button>
+    </div>
+    
+    <div class="buttons-container">
+        <button class="custom-button" onclick="navigateToPage('index.html')"> رواية ورش</button>
+        <button class="custom-button" onclick="navigateToPage('khatma2.html')">رواية حفص</button>
+    </div>
+
+    <div class="days-container">
+        <!-- تكرار أزرار الأيام من 1 إلى 30 -->
+        <a href="YAWM_01-30_WARCH.html" class="day-card">اليوم 1</a>
+        <a href="day2.html" class="day-card">اليوم 2</a>
+        <a href="day3.html" class="day-card">اليوم 3</a>
+        <a href="day4.html" class="day-card">اليوم 4</a>
+        <a href="day5.html" class="day-card">اليوم 5</a>
+        <a href="day6.html" class="day-card">اليوم 6</a>
+        <a href="day7.html" class="day-card">اليوم 7</a>
+        <a href="day8.html" class="day-card">اليوم 8</a>
+        <a href="day9.html" class="day-card">اليوم 9</a>
+        <a href="day10.html" class="day-card">اليوم 10</a>
+        <a href="day11.html" class="day-card">اليوم 11</a>
+        <a href="day12.html" class="day-card">اليوم 12</a>
+        <a href="day13.html" class="day-card">اليوم 13</a>
+        <a href="day14.html" class="day-card">اليوم 14</a>
+        <a href="day15.html" class="day-card">اليوم 15</a>
+        <a href="day16.html" class="day-card">اليوم 16</a>
+        <a href="day17.html" class="day-card">اليوم 17</a>
+        <a href="day18.html" class="day-card">اليوم 18</a>
+        <a href="day19.html" class="day-card">اليوم 19</a>
+        <a href="day20.html" class="day-card">اليوم 20</a>
+        <a href="day21.html" class="day-card">اليوم 21</a>
+        <a href="day22.html" class="day-card">اليوم 22</a>
+        <a href="day23.html" class="day-card">اليوم 23</a>
+        <a href="day24.html" class="day-card">اليوم 24</a>
+        <a href="day25.html" class="day-card">اليوم 25</a>
+        <a href="day26.html" class="day-card">اليوم 26</a>
+        <a href="day27.html" class="day-card">اليوم 27</a>
+        <a href="day28.html" class="day-card">اليوم 28</a>
+        <a href="day29.html" class="day-card">اليوم 29</a>
+        <a href="day30.html" class="day-card">اليوم 30</a>
+    </div>
+
+    <script>
+        function navigateToPage(page) {
+            window.location.href = page;
+        }
+        
+        // تبديل الوضع الليلي/النهاري
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            // حفظ التفضيل في localStorage
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            
+            // تغيير رمز الزر
+            themeToggle.textContent = isDarkMode ? '🌞' : '🌜';
+        });
+        
+        // تحميل التفضيل المحفوظ عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (savedDarkMode) {
+                document.body.classList.add('dark-mode');
+                themeToggle.textContent = '🌞';
+            } else {
+                themeToggle.textContent = '🌜';
+            }
+        });
+    </script>
+</body>
+</html>
